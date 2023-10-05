@@ -1,0 +1,44 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Plugins --
+set commentary
+set nerdtree
+
+let mapleader=" "
+set scrolloff=5
+set incsearch
+set clipboard+=unnamed
+set relativenumber
+set showmode
+
+"" -- Maps --
+" Actions
+map <leader>ff <Action>(SearchEverywhere)
+map <leader>ft <Action>(GotoClass)
+map <leader>fa <Action>(TextSearchAction)
+map <leader>fo <Action>(GotoFile)
+map <leader>fm <Action>(FileStructurePopup)
+map <leader>fc <Action>(GotoAction)
+
+map <leader>ra <Action>(ShowIntentionActions)
+map <leader>rt <Action>(Refactorings.QuickListPopupAction)
+map <leader>rr <Action>(RenameElement)
+map <leader>ri <Action>(Generate)
+map <leader>rc <Action>(CodeCleanup)
+map <leader>rc <Action>(CodeCleanup)
+
+map <leader>df <Action>(ReformatCode)
+map <leader>x <Action>(CloseEditor)
+
+nnoremap <C-n> :NERDTree<CR>
+
+" Misc
+map Q gq " Don't use Ex mode, use Q for formatting.
+map gh <Action>(ShowErrorDescription)
+
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
+nnoremap <Enter> o<ESC>
+nnoremap <S-Enter> O<ESC>
