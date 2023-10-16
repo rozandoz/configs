@@ -15,7 +15,7 @@ set noerrorbells
 set showmode
 
 "" -- Maps --
-" Actions
+" Find
 map <leader>ff <Action>(SearchEverywhere)
 map <leader>ft <Action>(GotoClass)
 map <leader>fa <Action>(TextSearchAction)
@@ -23,24 +23,36 @@ map <leader>fo <Action>(GotoFile)
 map <leader>fm <Action>(FileStructurePopup)
 map <leader>fc <Action>(GotoAction)
 
+" Refactor
 map <leader>ra <Action>(ShowIntentionActions)
 map <leader>rt <Action>(Refactorings.QuickListPopupAction)
 map <leader>rr <Action>(RenameElement)
 map <leader>ri <Action>(Generate)
 map <leader>rc <Action>(CodeCleanup)
 
+" Document
 map <leader>df <Action>(ReformatCode)
+map <leader>dw <Action>(EditorToggleUseSoftWraps)
+map <leader>de <Action>(ExpandAllRegions)
+map <leader>dc <Action>(CollapseAllRegions)
 map <leader>x <Action>(CloseEditor)
 
+" Block
+map <leader>be <Action>(ExpandRegion)
+map <leader>bc <Action>(CollapseRegion)
+
+" Show
 map <leader>si <Action>(ToggleInlayHintsGloballyAction)
 map <leader>sw <Action>(EditorToggleShowWhitespaces)
 
-nnoremap <C-n> :NERDTree<CR>
-map <C-t> <Action>(ActivateTerminalToolWindow)
+" Windows
+map <C-w>n :NERDTree<CR>
+map <C-w>t <Action>(ActivateTerminalToolWindow)
 
-" Misc
-map Q gq " Don't use Ex mode, use Q for formatting.
+" Misc 
+map Q gq 
 map gh <Action>(ShowErrorDescription)
+map gi <Action>(ReSharperGotoImplementation)
 
 nnoremap <C-u> <C-u>zz
 nnoremap <C-d> <C-d>zz
