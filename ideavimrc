@@ -10,6 +10,8 @@ set scrolloff=5
 set incsearch
 set clipboard+=unnamed
 set relativenumber
+set visualbell
+set noerrorbells
 set showmode
 
 "" -- Maps --
@@ -26,12 +28,15 @@ map <leader>rt <Action>(Refactorings.QuickListPopupAction)
 map <leader>rr <Action>(RenameElement)
 map <leader>ri <Action>(Generate)
 map <leader>rc <Action>(CodeCleanup)
-map <leader>rc <Action>(CodeCleanup)
 
 map <leader>df <Action>(ReformatCode)
 map <leader>x <Action>(CloseEditor)
 
+map <leader>si <Action>(ToggleInlayHintsGloballyAction)
+map <leader>sw <Action>(EditorToggleShowWhitespaces)
+
 nnoremap <C-n> :NERDTree<CR>
+map <C-t> <Action>(ActivateTerminalToolWindow)
 
 " Misc
 map Q gq " Don't use Ex mode, use Q for formatting.
