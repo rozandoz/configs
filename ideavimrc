@@ -4,6 +4,8 @@
 "" -- Plugins --
 set commentary
 set nerdtree
+set sneak
+set quickscope  
 
 let mapleader=" "
 set scrolloff=5
@@ -13,6 +15,8 @@ set relativenumber
 set visualbell
 set noerrorbells
 set showmode
+set ignorecase
+set smartcase
 
 "" -- Maps --
 " Find
@@ -22,6 +26,7 @@ map <leader>fa <Action>(TextSearchAction)
 map <leader>fo <Action>(GotoFile)
 map <leader>fm <Action>(FileStructurePopup)
 map <leader>fc <Action>(GotoAction)
+map <leader>fu <Action>(FindUsages)
 
 " Refactor
 map <leader>ra <Action>(ShowIntentionActions)
